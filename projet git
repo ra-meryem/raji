@@ -1,0 +1,105 @@
+DELL@DESKTOP-4C0RF9E MINGW64 ~ (master)
+$ mkdir learn_git
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~ (master)
+$ cd learn_git
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ touch third.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git init
+Initialized empty Git repository in C:/Users/DELL/learn_git/.git/
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git add third.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   third.txt
+
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) dbb20ec] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git log
+commit dbb20ec799e391b21322bd8e8e0bc0b456882a36 (HEAD -> master)
+Author: meryem raji <meryemr420@gmail.com>
+Date:   Sun Oct 20 00:39:45 2024 +0100
+
+    adding third.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ touch fourth.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git add fourth.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git commit -m "adding fourth.txt"
+[master 40660da] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ rm third.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git add .
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git commit -m "removing third.txt"
+[master 31a8cb1] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git log
+commit 31a8cb1458fbbb1e463e6589cef8c12721235353 (HEAD -> master)
+Author: meryem raji <meryemr420@gmail.com>
+Date:   Sun Oct 20 00:42:01 2024 +0100
+
+    removing third.txt
+
+commit 40660da54506a462cad2ca1a704b4c5e33cfb4bf
+Author: meryem raji <meryemr420@gmail.com>
+Date:   Sun Oct 20 00:41:08 2024 +0100
+
+    adding fourth.txt
+
+commit dbb20ec799e391b21322bd8e8e0bc0b456882a36
+Author: meryem raji <meryemr420@gmail.com>
+Date:   Sun Oct 20 00:39:45 2024 +0100
+
+    adding third.txt
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git config --global core.pager "cat"
+
+DELL@DESKTOP-4C0RF9E MINGW64 ~/learn_git (master)
+$ git config --global --list
+user.name=meryem raji
+user.email=meryemr420@gmail.com
+core.pager=cat
